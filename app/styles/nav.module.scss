@@ -1,0 +1,14 @@
+
+
+.nav {
+    
+    @apply mb-8 w-full font-semibold flex items-center space-x-1;
+
+    .li {
+        @apply uppercase text-slate-600 flex items-center;
+
+        a {
+            @apply flex hover:text-black items-center;
+        }
+    }
+}
