@@ -14,7 +14,7 @@ export default function Home() {
 					<div className="w-full flex justify-center md:justify-start">
 						<img src="/assets/user.svg" alt="user alt" className="size-[100px]" />
 					</div>
-					<h4 className="mb-4 w-full uppercase font-bold md:text-start text-center">Personal info</h4>
+					<h4 className="mb-2 w-full uppercase font-bold md:text-start text-center">Personal info</h4>
 					<hr className="mb-4" />
 					<p className="w-full font-normal md:text-start text-center">Hello, I am a web developer from Auckland, New Zealand</p>
 
