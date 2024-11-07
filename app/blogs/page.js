@@ -11,7 +11,7 @@ export default function Blogs() {
                 <img src="/assets/blogs.svg" alt="blogs alt" className="size-12" />
                 <div className="w-full">
                     <h4 className="uppercase">blogs</h4>
-                    <p className="italic text-sm">what I've learned</p>
+                    <p className="italic text-sm">{`what I've learned along the way`}</p>
                 </div>
             </div>
             <hr className="mt-2" />
