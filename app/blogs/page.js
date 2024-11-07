@@ -6,7 +6,7 @@ export default function Blogs() {
 
     return (<>
         <Nav />
-        <div className={`${styles.header}`}>
+        <div className={styles.header}>
             <div className="flex items-start space-x-4">
                 <img src="/assets/blogs.svg" alt="blogs alt" className="size-12" />
                 <div className="w-full">
@@ -16,7 +16,7 @@ export default function Blogs() {
             </div>
             <hr className="mt-2" />
         </div>
-        <div className={`${styles.content}`}>
+        <div className={styles.content}>
             <h1>blogs</h1>
         </div>
     </>);
