@@ -12,7 +12,7 @@ export default function Projects() {
                 <img src="/assets/projects.svg" alt="projects alt" className="size-14" />
                 <div className="w-full">
                     <h4 className="uppercase">current projects</h4>
-                    <p className="italic text-sm">what I've done</p>
+                    <p className="italic text-sm">{`what I've done`}</p>
                 </div>
             </div>
             <hr className="mt-2" />
