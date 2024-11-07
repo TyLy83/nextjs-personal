@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<div className="m-8">
+				<div className="m-8 overflow-auto">
 					{children}
 				</div>
 			</body>
