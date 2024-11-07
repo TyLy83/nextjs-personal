@@ -20,7 +20,7 @@ const Label = () => {
 
 }
 
-const Input = () => {
+const InputEl = () => {
 
     const ref = useRef(null);
     const props = useContext(InputProps);
@@ -41,7 +41,7 @@ const Input = () => {
 
 }
 
-export default ({ label = "", name = "", value = "", startIcon, endIcon, ...props }) => {
+export default function Input({ label = "", name = "", value = "", startIcon, endIcon, ...props }) {
 
     const ref = useRef(null);
     const [load, setLoad] = useState(false);
@@ -93,7 +93,7 @@ export default ({ label = "", name = "", value = "", startIcon, endIcon, ...prop
                     <Label />
                 </LabelProps.Provider>
                 <InputProps.Provider value={{ ...props, name, value }}>
-                    <Input />
+                    <InputEl />
                 </InputProps.Provider>
             </div>
             <>
