@@ -9,8 +9,8 @@ export default function Inputs() {
 
     return (<>
         <Nav />
-        <div className="w-full h-screen flex justify-center items-center">
         <h4 className="mb-4 uppercase">custom input fields</h4>
+        <div className="w-full h-screen flex justify-center items-center">
             <div className="w-full md:w-1/2 block">
                 <Default />
                 <StartIcon />
