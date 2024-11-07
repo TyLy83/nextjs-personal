@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import styles from "@/app/styles/nav.module.scss";
 
-export default () => {
+export default function Nav() {
 
     const pathname = usePathname();
     const [load, setLoad] = useState(false);
