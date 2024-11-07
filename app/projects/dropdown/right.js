@@ -27,13 +27,13 @@ const DropdownRight = () => {
             shown={right}>
             <ol className="uppercase font-semibold">
                 <li className="px-4 py-3">
-                    <Link href="">Profile</Link>
+                    <Link href="/projects/dropdown">Profile</Link>
                 </li>
                 <li className="px-4 py-3">
-                    <Link href="">Account</Link>
+                    <Link href="/projects/dropdown">Account</Link>
                 </li>
                 <li className="px-4 py-3 border-t">
-                    <Link href="">log out</Link>
+                    <Link href="/projects/dropdown">log out</Link>
                 </li>
             </ol>
         </Dropdown>

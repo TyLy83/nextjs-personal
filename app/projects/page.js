@@ -7,10 +7,10 @@ export default function Projects() {
         <Nav />
         <div className="py-8">
             <h1 className="mb-4 uppercase">projects</h1>
-
+            <hr className="mt-2 mb-4" />
             <Link href="/projects/modal" className="block mb-4">custom modal</Link>
-
             <Link href="/projects/input" className="block mb-4">custom inputs</Link>
+            <Link href="/projects/dropdown" className="block mb-4">custom dropdown</Link>
         </div>
     </>);
 
