@@ -1,14 +1,29 @@
+.wrapper {
 
+    @apply uppercase font-semibold text-sm;
 
-.nav {
-    
-    @apply mb-8 w-full font-semibold flex items-center space-x-1;
+    .nav {
 
-    .li {
-        @apply uppercase text-slate-600 flex items-center;
+        @apply inline-flex items-center space-x-1 md:space-x-2;
 
-        a {
-            @apply flex hover:text-black items-center;
+        li {
+
+            @apply inline-flex items-center cursor-pointer last:cursor-default last:text-slate-500;
+
+            svg {
+
+                @apply w-4 h-4 fill-none stroke-current stroke-2;
+
+            }
+
+            a {
+
+                @apply inline-flex items-center text-gray-700 hover:text-black dark:text-gray-400 dark:hover:text-white;
+
+            }
+
         }
+
     }
+
 }

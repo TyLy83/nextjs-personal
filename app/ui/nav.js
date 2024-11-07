@@ -1,29 +1,23 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
 import styles from "@/app/styles/nav.module.scss";
 
-export default function Nav() {
+export default () => {
 
     const pathname = usePathname();
     const [load, setLoad] = useState(false);
-    const [data, setData] = useState([]);
+    const [routes, setRoutes] = useState([]);
 
     useEffect(() => {
 
-        if (load === false && pathname && data.length === 0) {
+        if (pathname || routes.length === 0 && load === false) {
 
-            const data = pathname.split("/").map((path) => {
-
-                if (path !== "/")
-                    return path;
-
-            });
-
-            setData(data);
+            const arr = pathname.split('/');
+            const __routes = arr.filter(route => route !== '');
+            setRoutes([...__routes]);
 
         }
 
@@ -31,39 +25,46 @@ export default function Nav() {
 
     }, [pathname]);
 
-    return (<div className="fixed">
+    return (<div id="__blog-page-nav"
+        className={styles.wrapper}>
         <ol className={styles.nav}>
-            <li className={styles.li}>
+            <li>
                 <Link href="/">
-                    <img src="/assets/home-icon.png" className="size-5" alt="home-icon alt" />
+                    <img src="/assets/home-icon.png" alt="home-icon alt" className="size-5" />
                 </Link>
             </li>
-            {
-                data.map((li, index) => {
+            <>
+                {
+                    routes.map((route, index) => {
 
-                    if (index === data.length - 1)
-                        return (<li key={index} className={styles.li}>
-                            {
-                                li
-                            }
-                        </li>)
-                    else
-                        return (<li key={index} className={styles.li}>
-                            <Link href={li}>
-                                {
-                                    li
-                                }
+                        if (index < routes.length - 1)
+                            return (<li key={index}>
+                                <Link href={`/${route}`}>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24">
+                                        <path d="m9.5 7 5 5-5 5" />
+                                    </svg>
+                                    <span className="pl-2">
+                                        {
+                                            route
+                                        }
+                                    </span>
+                                </Link>
+                            </li>);
+                        else
+                            return (<li key={index}>
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    className="size-4 stroke-current fill-none stroke-2"
                                     viewBox="0 0 24 24">
-                                    <path d="m9 6 6 6-6 6" />
+                                    <path d="m9.5 7 5 5-5 5" />
                                 </svg>
-                            </Link>
-                        </li>)
-
-                })
-            }
+                                {
+                                    route
+                                }
+                            </li>)
+                    })
+                }
+            </>
         </ol>
-    </div>);
+    </div>)
 
 }
