@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import styles from "@/app/styles/nav.module.scss";
 
-export default () => {
+export default function Nav() {
 
     const pathname = usePathname();
     const [load, setLoad] = useState(false);

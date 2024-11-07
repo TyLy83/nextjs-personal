@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default () => {
+export default function Home() {
 
 	return (<div className="relative">
 		<div id="__nav" className="w-full fixed">

@@ -1,7 +1,7 @@
 
 import Nav from "@/app/ui/nav";
 
-export default () => {
+export default function Blogs() {
 
     return (<>
         <Nav />
