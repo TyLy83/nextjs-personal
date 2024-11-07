@@ -11,6 +11,7 @@ const DropdownPage = () => {
     return (<>
         <Nav />
         <div className="w-full h-screen flex justify-center items-center">
+            <h4 className="mb-4 uppercase">custom dropdown</h4>
             <div className="w-full md:w-1/2 grid md:grid-cols-2">
                 <DropdownLeft />
                 <DropdownRight />
